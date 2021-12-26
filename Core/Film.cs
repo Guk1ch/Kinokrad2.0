@@ -6,12 +6,12 @@ namespace Core
 {
     class Film
     {
-        public int id { get; set; }
-        public string title { get; set; }
-        public string country { get; set; }
-        public string director { get; set; }
-        public string duration { get; set; }
-        public string poster { get; set; }
+        public int ID_Film { get; set; }
+        public string Title { get; set; }
+        public string Country { get; set; }
+        public string Director { get; set; }
+        public string Duration { get; set; }
+        public string Poster { get; set; }
     }
     
 }

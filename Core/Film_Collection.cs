@@ -6,10 +6,10 @@ namespace Core
 {
     class Film_Collection
     {
-        public int id_fc { get; set; }
-        public int id_film { get; set; }
-        public int id_collection { get; set; }
-        public DateTime date { get; set; }
+        public int ID_FC { get; set; }
+        public int ID_Film { get; set; }
+        public int ID_Collection { get; set; }
+        public DateTime Date { get; set; }
 
     }
 }

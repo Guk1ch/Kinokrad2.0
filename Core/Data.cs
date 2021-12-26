@@ -25,22 +25,22 @@ namespace Core
         //{
         //    return connection.Query<Film_Collection>("select * from Film_Collection ").AsList();
         //}
-        public static List<Film_Collection> GetFilm_Collections(int id)
+        public static List<Film> GetFilm_Collections(int id)
         {
-            return connection.Query<Film_Collection>("select * from [dbo].[Film_Collection] fc" +
+            return connection.Query<Film>("select f.Title from [dbo].[Film_Collection] fc" +
                                                         " join [dbo].[Film] f " +
                                                         "on fc.ID_Film = f.ID_Film " +
                                                         " join [dbo].[Collection] c " +
                                                         " on fc.ID_Collection = c.ID_Collection " +
                                                         $"where c.ID_Collection = {id}").AsList();
         }
-        public static void print(Film_Collection p)
-        {
-            foreach (int i in p)
-            {
-                Console.WriteLine(p);
-            }
-        }
+        //public static void print(Film_Collection p)
+        //{
+        //    foreach (var i in p)
+        //    {
+        //        Console.WriteLine(p.id_film);
+        //    }
+        //}
 
         public static void AddCollection(Collection collection)
         {
@@ -63,12 +63,12 @@ namespace Core
         {
             connection.Query("insert into[dbo].[Film] " +
                             " ([ID_Film], [Title], [Country], [Duration], [Director]) " +
-                            $"values ({film.id}, {film.title}, {film.country}, {film.duration}, {film.director})");
+                            $"values ({film.ID_Film}, {film.Title}, {film.Country}, {film.Duration}, {film.Director})");
         }
 
         public static void UpdateFilm(int id, Film film)
         {
-            connection.Query($"update [dbo].[Film] set [Title] = '{film.title}', [Country] = '{film.country}', [Duration] = '{film.duration}', [Director] = '{film.director}' where [ID_Film] = {id}");
+            connection.Query($"update [dbo].[Film] set [Title] = '{film.Title}', [Country] = '{film.Country}', [Duration] = '{film.Duration}', [Director] = '{film.Director}' where [ID_Film] = {id}");
         }
 
         public static void DeleteFilm(int id)
@@ -80,7 +80,7 @@ namespace Core
         {
             connection.Query("insert into[dbo].[Film_Collection] " +
                             " ([ID_FC], [ID_Film], [ID_Collection], [Date])" +
-                            $"values ({film_Collection.id_fc}, {film_Collection.id_film}, {film_Collection.id_collection}, {DateTime.Now})");
+                            $"values ({film_Collection.ID_FC}, {film_Collection.ID_Film}, {film_Collection.ID_Collection}, {DateTime.Now})");
         }
 
         public static void DeleteFilm_Collection(int id)
