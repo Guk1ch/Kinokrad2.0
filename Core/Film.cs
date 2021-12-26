@@ -13,4 +13,5 @@ namespace Core
         public string duration { get; set; }
         public string poster { get; set; }
     }
+    
 }

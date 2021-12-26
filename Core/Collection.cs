@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Dapper;
+using System.Configuration;
 
 namespace Core
 {
@@ -9,4 +11,8 @@ namespace Core
         public int id_coll { get; set; }
         public string name { get; set; }
     }
+    //public void AddCollection(Collection collection)
+    //{
+       
+    //}
 }

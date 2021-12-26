@@ -5,4 +5,12 @@
     <RootNamespace>Kinokrad2._0</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+
 </Project>

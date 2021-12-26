@@ -6,7 +6,7 @@ namespace Core
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Data.GetFilms();
         }
     }
 }
