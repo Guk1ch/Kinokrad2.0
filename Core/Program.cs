@@ -6,7 +6,9 @@ namespace Core
     {
         static void Main(string[] args)
         {
-            Data.GetFilms();
+          int id = 2;
+          Data.GetFilms();
+          Data.GetFilm_Collections(id);
         }
     }
 }
